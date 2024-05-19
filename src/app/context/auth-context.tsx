@@ -53,7 +53,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         const res = await axios.get(`${api_url}/api/auth/session`, {
           headers: { Authorization: `Bearer ${token}` }
         });
-        console.log("usaer",res.data.user)
+        console.log("user",res.data.user)
         setUser(res.data.user);
         setIsAuthenticated(true);
       } 
